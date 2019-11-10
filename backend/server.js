@@ -13,9 +13,9 @@ app.use(cors());
 app.use(bodyParser.json());
 
 mongoose.connect(
-  // process.env.MONGODB_URI || "mongodb://127.0.0.1:27017/restaurants",
-  process.env.MONGODB_URI ||
-    "mongodb://hajix007:Abdi=28278@ds263307.mlab.com:63307/heroku_xjb2shr7",
+  process.env.MONGODB_URI || "mongodb://127.0.0.1:27017/restaurants",
+  // process.env.MONGODB_URI ||
+  //   "mongodb://hajix007:Abdi=28278@ds263307.mlab.com:63307/heroku_xjb2shr7",
   {
     useNewUrlParser: true
   }
@@ -93,7 +93,7 @@ app.use("/restaurants", routes);
 // Serve static assets if in production
 if (process.env.NODE_ENV === "production") {
   // Set a static folder
-  app.use(express.static("./build"));
+  app.use(express.static(path.join(__dirname, "../", "client", "build")));
 
   app.get("*", (req, res) => {
     res.sendFile(
