@@ -5,7 +5,7 @@ const cors = require("cors");
 const mongoose = require("mongoose");
 const routes = express.Router();
 const path = require("path");
-const PORT = process.env.port || 4000;
+const PORT = process.env.PORT || 4000;
 
 let Restaurant = require("./models/restaurant-model");
 
