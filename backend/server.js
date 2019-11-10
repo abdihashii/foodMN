@@ -14,8 +14,6 @@ app.use(bodyParser.json());
 
 mongoose.connect(
   process.env.MONGODB_URI || "mongodb://127.0.0.1:27017/restaurants",
-  // process.env.MONGODB_URI ||
-  //   "mongodb://hajix007:Abdi=28278@ds263307.mlab.com:63307/heroku_xjb2shr7",
   {
     useNewUrlParser: true
   }
