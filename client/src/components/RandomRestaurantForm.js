@@ -13,7 +13,6 @@ const initialRestaurantState = {
   price: ""
 };
 const baseUrl = `/api`;
-// const baseUrl = `http://localhost:3010/restaurants`;
 
 export const RandomRestaurantForm = ({ setFilteredRestaurants, onSubmit }) => {
   /* Hooks */

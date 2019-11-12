@@ -19,8 +19,7 @@ export const App = () => {
         <nav className="navbar navbar-expand-lg navbar-light bg-light nav-wrapper">
           <Link to="/" className="navbar-brand">
             <div className="headerText">
-              {/* <h3>foodMN</h3> */}
-              <img alt="Home" src={logo}></img>
+              <img alt="foodMN - Home" src={logo}></img>
             </div>
           </Link>
           <div className="collapse navbar-collapse link-wrapper">
