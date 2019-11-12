@@ -6,7 +6,7 @@ import { Table } from "react-bootstrap";
 import { Restaurant } from "./Restaurant";
 
 /* Initial values */
-const baseUrl = `http://localhost:4000/api/restaurants`;
+const baseUrl = "/api/restaurants";
 
 export const RestaurantList = () => {
   const [restaurants, setRestaurants] = useState([]);
