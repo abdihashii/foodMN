@@ -1,6 +1,6 @@
 /* React Libraries */
 import React, { useState, useEffect } from "react";
-import Table from "react-bootstrap/table";
+import { Table } from "react-bootstrap";
 
 /* Custom Components */
 import { Restaurant } from "./Restaurant";
