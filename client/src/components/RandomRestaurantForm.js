@@ -12,7 +12,7 @@ const initialRestaurantState = {
   city: "",
   price: ""
 };
-const baseUrl = `http://localhost:4000/restaurants`;
+const baseUrl = `http://localhost:4000/api`;
 // const baseUrl = `http://localhost:3010/restaurants`;
 
 export const RandomRestaurantForm = ({ setFilteredRestaurants, onSubmit }) => {
