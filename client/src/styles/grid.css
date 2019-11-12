@@ -13,12 +13,18 @@
   grid-template-columns: 1fr 6fr 3fr;
 
   justify-items: end;
+
+  /* border: 1px solid lightgray;
+  border-bottom: none; */
 }
 
 .headerText {
   grid-column: 1;
 
   /* height: 10px; */
+}
+.headerText img {
+  height: 60px;
 }
 
 .link-wrapper {
