@@ -26,6 +26,7 @@ export const RestaurantList = () => {
 
   return (
     <Table className="restaurant-list-wrapper" bordered hover>
+      {process.env.PORT}
       <thead>
         <tr>
           <th>Name</th>
