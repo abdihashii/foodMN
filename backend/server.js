@@ -24,7 +24,7 @@ connection.once("open", function() {
   console.log("MongoDB database connection established successfully");
 });
 
-routes.get("/", (req, res) => {
+routes.get("/restaurants", (req, res) => {
   Restaurant.find((err, restaurants) => {
     if (err) {
       console.log(err);
@@ -86,7 +86,7 @@ routes.delete("/delete/:id", (req, res) => {
   });
 });
 
-app.use("/restaurants", routes);
+app.use("/api", routes);
 
 // Serve static assets if in production
 if (process.env.NODE_ENV === "production") {
