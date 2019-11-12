@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "run-p build-server run-server mongo",
+    "start": "run-p build-server run-server",
     "build-server": "cd backend && npm install && node server.js",
     "mongo": "mongod",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
