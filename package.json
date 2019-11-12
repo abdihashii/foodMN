@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test-t": "echo \"Error: no test specified\" && exit 1",
-    "test": "cd backend && mongo run-server",
+    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "run-p build-server",
     "build-server": "cd backend && npm install && node server.js",
     "run-server": "nodemon server",
