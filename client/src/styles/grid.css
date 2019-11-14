@@ -16,11 +16,10 @@ body {
   grid-area: nav;
 
   display: grid;
-  grid-template-columns: 1fr 6fr 3fr;
   grid-template-areas: "logo space links";
+  grid-template-columns: 1fr 6fr 3fr;
 
   justify-items: end;
-
   align-items: center;
 
   padding: 1em;
@@ -62,11 +61,74 @@ body {
   color: #558822;
 }
 
-/********************** FORM **********************/
-.form-grid {
+/********************** CONTENT (Bottom wrapper) **********************/
+.content-grid {
   grid-area: form;
 
   display: grid;
+  grid-template-areas:
+    "... text ..."
+    "... form ...";
+  /* grid-template-columns: 2fr minmax(2fr, 6fr) 2fr; */
+  grid-template-columns: 2fr 4fr 2fr;
+  grid-template-rows: auto auto;
+
+  justify-items: center;
+
+  border-radius: 0 0 0.5em 0.5em;
 
   background-color: #faf3dd;
+}
+
+.title {
+  grid-area: text;
+
+  padding: 2em 0 1em 0;
+}
+.title > h3 {
+  margin: 0;
+}
+
+.form-grid {
+  grid-area: form;
+}
+
+.form-grid form {
+  display: grid;
+  grid-template-areas:
+    "cities"
+    "prices"
+    "submit";
+  grid-template-rows: repeat(auto-fill, minmax(40px, 1fr));
+  grid-row-gap: 0.5em;
+
+  padding: 1em 0 2em 0;
+}
+
+.cities {
+  grid-area: cities;
+
+  border-top-left-radius: 200px;
+}
+
+.prices {
+  grid-area: prices;
+}
+
+.submit-btn {
+  grid-area: submit;
+  width: 100%;
+  background-color: #558822;
+}
+
+.submit-btn:hover {
+  background-color: #33658a;
+}
+
+.bottom-content {
+  grid-column: 1 / -1;
+}
+
+.restaurant-list-wrapper {
+  /* padding: 3.5em; */
 }

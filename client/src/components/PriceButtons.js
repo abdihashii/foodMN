@@ -9,7 +9,7 @@ export const PriceButtons = ({
   return (
     <>
       {/* Prices */}
-      <div className="btn-group btn-group-toggle" data-toggle="buttons">
+      <div className="btn-group btn-group-toggle prices" data-toggle="buttons">
         <label className={classes.cheap}>
           <input
             type="radio"
@@ -58,7 +58,6 @@ export const PriceButtons = ({
           />
           $$$$
         </label>
-        <br />
       </div>
     </>
   );

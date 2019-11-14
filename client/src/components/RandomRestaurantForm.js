@@ -67,7 +67,6 @@ export const RandomRestaurantForm = ({ setFilteredRestaurants, onSubmit }) => {
         restaurant={inputRestaurantValues}
         classes={cityClassNames}
       />
-      <br />
       <PriceButtons
         changeForm={changeForm}
         changeRole={changeRole}
@@ -75,7 +74,11 @@ export const RandomRestaurantForm = ({ setFilteredRestaurants, onSubmit }) => {
         classes={priceClassNames}
       />
       <div>
-        <button type="submit" className="btn btn-primary" onClick={onSubmit}>
+        <button
+          type="submit"
+          className="btn btn-primary submit-btn"
+          onClick={onSubmit}
+        >
           Submit
         </button>
       </div>

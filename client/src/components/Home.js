@@ -24,12 +24,8 @@ export const Home = () => {
 
   return (
     <>
-      <RandomRestaurant
-        className="restaurant"
-        title="Restaurant"
-        restaurant={randomRestaurant}
-      />
-      <div>
+      <RandomRestaurant title="Restaurant" restaurant={randomRestaurant} />
+      <div className="form-grid">
         <RandomRestaurantForm
           setFilteredRestaurants={setFilteredRestaurants}
           onSubmit={submitChoice}

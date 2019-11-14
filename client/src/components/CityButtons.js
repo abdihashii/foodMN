@@ -9,7 +9,7 @@ export const CityButtons = ({
   return (
     <>
       {/* Cities */}
-      <div className="btn-group btn-group-toggle" data-toggle="buttons">
+      <div className="btn-group btn-group-toggle cities" data-toggle="buttons">
         <label className={classes.mpls}>
           <input
             type="radio"

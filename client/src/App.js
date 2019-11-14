@@ -42,7 +42,7 @@ export const App = () => {
             </ul>
           </div>
         </nav>
-        <div className="form-grid">
+        <div className="content-grid">
           <Switch>
             <Route path="/restaurants">
               <RestaurantList />

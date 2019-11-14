@@ -25,7 +25,7 @@ export const RestaurantList = () => {
   };
 
   return (
-    <Table className="restaurant-list-wrapper" bordered hover>
+    <Table className="restaurant-list-wrapper bottom-content" bordered hover>
       <thead>
         <tr>
           <th>Name</th>
