@@ -23,7 +23,7 @@ export const Home = () => {
   // console.table(randomRestaurant);
 
   return (
-    <div className="random-restaurant-wrapper">
+    <>
       <RandomRestaurant
         className="restaurant"
         title="Restaurant"
@@ -35,6 +35,6 @@ export const Home = () => {
           onSubmit={submitChoice}
         />
       </div>
-    </div>
+    </>
   );
 };

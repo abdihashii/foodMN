@@ -15,26 +15,26 @@ const logo = require("./foodMN.png");
 export const App = () => {
   return (
     <Router>
-      <div className="container wrapper">
-        <nav className="navbar navbar-expand-lg navbar-light bg-light nav-wrapper">
-          <Link to="/" className="navbar-brand">
+      <div className="wrapper-grid">
+        <nav className="nav-grid">
+          <Link to="/">
             <div className="headerText">
               <img alt="foodMN - Home" src={logo}></img>
             </div>
           </Link>
-          <div className="collapse navbar-collapse link-wrapper">
-            <ul className="navbar-nav mr-auto">
-              <li className="nav-item">
+          <div className="links">
+            <ul>
+              <li>
                 <Link to="/restaurants" className="nav-link">
                   restaurants
                 </Link>
               </li>
-              <li className="nav-item">
+              <li>
                 <Link to="/about" className="nav-link">
                   about
                 </Link>
               </li>
-              <li className="nav-item">
+              <li>
                 <Link to="/" className="nav-link">
                   signin
                 </Link>
@@ -42,7 +42,7 @@ export const App = () => {
             </ul>
           </div>
         </nav>
-        <div className="bottom-wrapper">
+        <div className="form-grid">
           <Switch>
             <Route path="/restaurants">
               <RestaurantList />
