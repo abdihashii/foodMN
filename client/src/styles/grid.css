@@ -6,8 +6,8 @@ body {
   display: grid;
   grid-template-areas:
     "... nav ..."
-    "... form ...";
-  grid-template-columns: 10% 80% 10%;
+    "... bottom-grid ...";
+  grid-template-columns: 20% 60% 20%;
   grid-template-rows: minmax(60px, 1fr) auto;
 }
 
@@ -22,7 +22,7 @@ body {
   justify-items: end;
   align-items: center;
 
-  padding: 1em;
+  padding: 1em 1.75em 1em 1.75em;
 
   border-radius: 0.5em 0.5em 0 0;
   border-bottom: 1px solid lightgray;
@@ -30,11 +30,11 @@ body {
   background-color: #faf3dd;
 }
 
-.nav-grid .headerText {
+.nav-grid .logo {
   grid-area: logo;
 }
 
-.nav-grid .headerText img {
+.nav-grid .logo img {
   height: 60px;
 }
 
@@ -63,7 +63,7 @@ body {
 
 /********************** CONTENT (Bottom wrapper) **********************/
 .content-grid {
-  grid-area: form;
+  grid-area: bottom-grid;
 
   display: grid;
   grid-template-areas:
@@ -118,11 +118,11 @@ body {
 .submit-btn {
   grid-area: submit;
   width: 100%;
-  background-color: #558822;
+  background-color: #33658a;
 }
 
 .submit-btn:hover {
-  background-color: #33658a;
+  background-color: #558822;
 }
 
 .bottom-content {
@@ -131,4 +131,86 @@ body {
 
 .restaurant-list-wrapper {
   /* padding: 3.5em; */
+}
+
+/********************** Media Queries **********************/
+@media (max-width: 1200px) {
+  .wrapper-grid {
+  }
+
+  .title > h3 {
+    font-size: 1.5em;
+  }
+}
+
+@media (max-width: 1024px) {
+  .wrapper-grid {
+    height: 100vh;
+    grid-template-areas:
+      "... logo ..."
+      "... bottom-grid ...";
+    /* grid-template-columns: 20% 60% 20%; */
+    /* grid-template-rows: minmax(60px, 1fr) auto; */
+    grid-template-rows: 1fr 4fr;
+  }
+
+  .nav-grid {
+    grid-area: logo;
+
+    display: grid;
+    grid-template-areas: "logo";
+    grid-template-columns: 1fr;
+
+    justify-content: center;
+
+    /* padding: 2em; */
+  }
+
+  .nav-grid .logo img {
+    object-fit: contain;
+    width: 100%;
+    max-height: 100%;
+  }
+
+  .links {
+    display: none;
+  }
+
+  .title > h3 {
+    font-size: 1em;
+  }
+}
+
+/* 2688x1242px at 458ppi, iPhone X */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-device-pixel-ratio: 3) {
+  .wrapper-grid {
+    grid-template-areas:
+      "logo"
+      "bottom-grid";
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 4fr;
+  }
+
+  .content-grid {
+    grid-template-areas:
+      "text"
+      "form";
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 5fr;
+  }
+
+  .title {
+    grid-area: text;
+
+    padding: 2em 2em 1em 2em;
+  }
+
+  .title > h3 {
+    font-size: 2.5em;
+    text-align: center;
+  }
+
+  .form-grid {
+    grid-area: form;
+  }
 }

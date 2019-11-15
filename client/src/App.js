@@ -18,7 +18,7 @@ export const App = () => {
       <div className="wrapper-grid">
         <nav className="nav-grid">
           <Link to="/">
-            <div className="headerText">
+            <div className="logo">
               <img alt="foodMN - Home" src={logo}></img>
             </div>
           </Link>
